@@ -14,7 +14,7 @@
 			<br/>
 				<a href="{% url 'serie' %}">
 					<button type="button" class="btn btn_success">
-						<span class="glyphicon ghyphicon-plus"></span>
+						<span class="glyphicon glyphicon-plus"></span>
 					</button>
 				</a>
 		</div>		
@@ -23,33 +23,34 @@
 	{% for serie in serie_list %}
 		<div class="row">
 			<div class="col-md-1 col-xs-1 col-sm-1"></div>
-			<div class="col-md-7 col-xs-1">
+			<div class="col-md-7 col-xs-1" >
 				<ul class="list-group">
-					<li class="list-group-item">
-						<a href="{% url 'detail' serie.pk %}">{{ serie.title }}</a>
-						<span class="badge"></span>
+					<li class="list-group-item" style="padding: 3% 3%">
+						<a href="{% url 'detail' serie.pk %}"><span class="badge">
+							{{ serie.title }}
+						</span></a>
 					</li>
 				</ul>
 				<br>
 			</div>
-			<div class="col-md-1 col-xs-1 col-sm-1">
+			<div class="col-md-1 col-xs-1 col-sm-1" style="margin-left: 1%; margin-top: 1%;">
 				<a href="{% url 'detail' serie.pk %}">
 					<button type="button" class="btn btn-info">
 						<span class="glyphicon glyphicon-open"></span>
 					</button>
 				</a>
 			</div>
-			<div class="col-md-1 col-xs-1 col-sm-1">
+			<div class="col-md-1 col-xs-1 col-sm-1" style="margin-top: 1%;">
 				<a href="{% url 'edit' serie.pk %}">
 					<button type="button" class="btn btn-info">
 						<span class="glyphicon glyphicon-pencil"></span>
 					</button>
 				</a>
 			</div>
-			<div class="col-md-1">
+			<div class="col-md-1 col-xs-1 col-sm-1" style="margin-top: 1%">
 				<a href="{% url 'delete' serie.pk %}">
 					<button type="button" class="btn btn-info">
-						<span class="glyphicon ghyphicon-trash"></span>
+						<span class="glyphicon glyphicon-trash"></span>
 					</button>
 				</a>
 			</div>
