@@ -1,0 +1,2 @@
+# Series-Crud
+Django-CRUD
